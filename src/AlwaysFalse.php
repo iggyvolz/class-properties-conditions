@@ -6,7 +6,7 @@ namespace iggyvolz\ClassProperties\Conditions;
 
 use Attribute;
 
-<<Attribute(Attribute::TARGET_PROPERTY)>>
+@@Attribute(Attribute::TARGET_PROPERTY)
 class AlwaysFalse extends Condition
 {
     public function check($value):void

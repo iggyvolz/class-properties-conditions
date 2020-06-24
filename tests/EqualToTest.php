@@ -41,8 +41,8 @@ class EqualToTest extends TestCase
 }
 class BaseIdentifiable extends Identifiable
 {
-    <<Identifier>>
-    <<Property>>
+    @@Identifier
+    @@Property
     private int $identifier;
     public function __construct(
         int $identifier

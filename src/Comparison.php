@@ -11,16 +11,16 @@ use iggyvolz\ClassProperties\Hooks\PreSet;
 use iggyvolz\ClassProperties\Identifiable;
 use iggyvolz\ClassProperties\Attributes\ReadOnlyProperty;
 
-<<Attribute(Attribute::TARGET_PROPERTY)>>
+@@Attribute(Attribute::TARGET_PROPERTY)
 class Comparison extends Condition
 {
     public const LESS = 1 << 0;
     public const EQUAL = 1 << 1;
     public const GREATER = 1 << 2;
     public function __construct(
-        <<ReadOnlyProperty>>
+        @@ReadOnlyProperty
             private float|int $checkValue,
-        <<ReadOnlyProperty>>
+        @@ReadOnlyProperty
             private int $checks
     ) {
         $this->checks &= self::LESS | self::EQUAL | self::GREATER;
