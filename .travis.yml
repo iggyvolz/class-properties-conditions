@@ -2,3 +2,26 @@ language: php
 php:
   # - '8.0'
   - nightly
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+install:
+  - composer --prefer-dist --classmap-authoritative install --ignore-platform-reqs
+
+script:
+  - vendor/bin/phpunit
+  - vendor/bin/phan
+  - vendor/bin
+jobs:
+  include:
+    - name: phpunit
+      stage: test
+      script: vendor/bin/phpunit
+    - name: phan
+      script: vendor/bin/phan
+    - name: psalm
+      script: vendor/bin/psalm
+    - name: phpcs
+      script: vendor/bin/phpcs
