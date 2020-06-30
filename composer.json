@@ -18,7 +18,7 @@
     ],
     "require": {
         "php": "^8.0-dev",
-        "iggyvolz/class-properties": "dev-php80"
+        "iggyvolz/class-properties": "dev-main"
     },
     "autoload": {
         "psr-4": {
