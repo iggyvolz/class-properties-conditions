@@ -27,7 +27,7 @@ class LengthComparison extends Condition
         if(!is_string($value)) {
             throw new ConditionException("Invalid type ".get_debug_type($value).", needed string");
         }
-        $result = match($value <=> $this->checkValue) {
+        $result = match(strlen($value) <=> $this->checkValue) {
             -1 => Comparison::LESS,
             0 => Comparison::EQUAL,
             1 => Comparison::GREATER
