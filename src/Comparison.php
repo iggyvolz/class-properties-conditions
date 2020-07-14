@@ -50,6 +50,6 @@ class Comparison extends Condition
             self::LESS | self::GREATER => "unequal to",
             self::LESS | self::EQUAL => "less than or equal to",
             default => "(nonsensical comparision ".$this->checks.")"
-        }
+        };
     }
 }
