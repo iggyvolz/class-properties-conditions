@@ -21,8 +21,8 @@ class AlwaysFalseTest extends TestCase
     {
         $this->assertTrue(true);
         $dummy = new class extends ClassProperties {
-            <<Property>>
-            <<AlwaysFalse>>
+            @@Property
+            @@AlwaysFalse
             private ?int $foo; // Will only accept null
         };
         $dummy->foo = null; // AlwaysFails is bypassed
@@ -32,8 +32,8 @@ class AlwaysFalseTest extends TestCase
         $this->expectException(ConditionException::class);
         $this->expectExceptionMessage("Always fails");
         $dummy = new class extends ClassProperties {
-            <<Property>>
-            <<AlwaysFalse>>
+            @@Property
+            @@AlwaysFalse
             private ?int $foo; // Will only accept null
         };
         $dummy->foo = 7; // AlwaysFails is not bypassed

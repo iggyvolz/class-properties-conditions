@@ -9,17 +9,17 @@ use iggyvolz\ClassProperties\Hooks\PreSet;
 use iggyvolz\ClassProperties\Identifiable;
 use iggyvolz\ClassProperties\Attributes\ReadOnlyProperty;
 
-<<Attribute(Attribute::TARGET_PROPERTY)>>
+@@Attribute(Attribute::TARGET_PROPERTY)
 class Between extends All
 {
-    <<ReadOnlyProperty>>
+    @@ReadOnlyProperty
     private bool $inclusiveMin;
-    <<ReadOnlyProperty>>
+    @@ReadOnlyProperty
     private bool $inclusiveMax;
     public function __construct(
-        <<ReadOnlyProperty>>
+        @@ReadOnlyProperty
         private float|int $min,
-        <<ReadOnlyProperty>>
+        @@ReadOnlyProperty
         private float|int $max,
         bool $inclusive,
         ?bool $inclusiveMax = null

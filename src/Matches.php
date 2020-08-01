@@ -11,11 +11,11 @@ use iggyvolz\ClassProperties\Hooks\PreSet;
 use iggyvolz\ClassProperties\Identifiable;
 use iggyvolz\ClassProperties\Attributes\ReadOnlyProperty;
 
-<<Attribute(Attribute::TARGET_PROPERTY)>>
+@@Attribute(Attribute::TARGET_PROPERTY)
 class Matches extends Condition
 {
     public function __construct(
-        <<ReadOnlyProperty>>
+        @@ReadOnlyProperty
             private string $regex
     ) {
     }
